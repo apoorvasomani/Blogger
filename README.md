@@ -92,7 +92,7 @@ These are the API Endpoints -
   - Pagination is enabled on this API. 
 
 - Response Body
-  ```
+```
   {
     "count": 10,
     "next": "http://127.0.0.1:8000/posts?page=2",
@@ -121,5 +121,5 @@ These are the API Endpoints -
             }
         }
     ]
-}
-```
+  }
+  ```
