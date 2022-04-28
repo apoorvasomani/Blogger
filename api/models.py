@@ -16,13 +16,3 @@ class Post(models.Model):
 	def save(self, *args, **kwargs):
 		self.body = ''.join(self.commented_body.keys())
 		super(Post, self).save(*args, **kwargs)
-
-
-class Comment(models.Model):
-	created = models.DateTimeField(auto_now_add=True)
-	body = models.TextField(blank=True, default='')
-	post = models.ForeignKey(Post, on_delete=models.CASCADE)
-	hash_value = models.UUIDField(default=uuid.uuid4, editable=False)
-
-	class Meta:
-		ordering = ['created']
